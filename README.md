@@ -1,7 +1,7 @@
 # Real-Time Server Metrics Pipeline with Medallion Architecture
 
 ## Architecture
-![Server Metrics Architecture](architecture-diagram.svg)
+![Server Metrics Architecture](Architecture.png)
 
 ## Overview
 This project implements a comprehensive data engineering pipeline that processes high-frequency server metrics data through a medallion architecture (Bronze, Silver, Gold) on Google Cloud Platform and visualizes insights through an interactive Streamlit dashboard.
