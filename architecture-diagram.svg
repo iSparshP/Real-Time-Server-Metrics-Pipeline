@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
+  <!-- Background -->
+  <rect width="1000" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="500" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Real-Time Server Metrics Pipeline with Medallion Architecture</text>
+  
+  <!-- Layer Labels -->
+  <rect x="10" y="80" width="150" height="30" rx="5" fill="#e9ecef" />
+  <text x="85" y="100" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Data Sources</text>
+  
+  <rect x="10" y="190" width="150" height="30" rx="5" fill="#e9ecef" />
+  <text x="85" y="210" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Ingestion Layer</text>
+  
+  <rect x="10" y="320" width="150" height="30" rx="5" fill="#e9ecef" />
+  <text x="85" y="340" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Storage & Processing</text>
+  
+  <rect x="10" y="450" width="150" height="30" rx="5" fill="#e9ecef" />
+  <text x="85" y="470" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Orchestration</text>
+  
+  <rect x="10" y="550" width="150" height="30" rx="5" fill="#e9ecef" />
+  <text x="85" y="570" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Visualization</text>
+  
+  <!-- Data Sources Layer -->
+  <!-- Server 1 -->
+  <rect x="200" y="80" width="80" height="40" rx="5" fill="#c5e1a5" stroke="#81c784" stroke-width="2" />
+  <text x="240" y="105" font-family="Arial" font-size="12" text-anchor="middle">Server 1</text>
+  
+  <!-- Server 2 -->
+  <rect x="320" y="80" width="80" height="40" rx="5" fill="#c5e1a5" stroke="#81c784" stroke-width="2" />
+  <text x="360" y="105" font-family="Arial" font-size="12" text-anchor="middle">Server 2</text>
+  
+  <!-- Server 3 -->
+  <rect x="440" y="80" width="80" height="40" rx="5" fill="#c5e1a5" stroke="#81c784" stroke-width="2" />
+  <text x="480" y="105" font-family="Arial" font-size="12" text-anchor="middle">Server 3</text>
+  
+  <!-- ... -->
+  <text x="560" y="105" font-family="Arial" font-size="18" text-anchor="middle">...</text>
+  
+  <!-- Server N -->
+  <rect x="600" y="80" width="80" height="40" rx="5" fill="#c5e1a5" stroke="#81c784" stroke-width="2" />
+  <text x="640" y="105" font-family="Arial" font-size="12" text-anchor="middle">Server N</text>
+
+  <!-- Ingestion Layer -->
+  <!-- Python Producer -->
+  <rect x="200" y="180" width="120" height="50" rx="5" fill="#90caf9" stroke="#42a5f5" stroke-width="2" />
+  <text x="260" y="210" font-family="Arial" font-size="14" text-anchor="middle">Python Producer</text>
+  
+  <!-- Pub/Sub -->
+  <rect x="400" y="180" width="120" height="50" rx="5" fill="#90caf9" stroke="#42a5f5" stroke-width="2" />
+  <text x="460" y="205" font-family="Arial" font-size="14" text-anchor="middle">Google Pub/Sub</text>
+  <text x="460" y="220" font-family="Arial" font-size="10" text-anchor="middle">(server-metrics topic)</text>
+  
+  <!-- Bronze Layer Consumer -->
+  <rect x="600" y="180" width="120" height="50" rx="5" fill="#90caf9" stroke="#42a5f5" stroke-width="2" />
+  <text x="660" y="210" font-family="Arial" font-size="14" text-anchor="middle">Bronze Consumer</text>
+
+  <!-- Storage & Processing Layer -->
+  <!-- BigQuery Container -->
+  <rect x="200" y="280" width="600" height="140" rx="10" fill="#ffffff" stroke="#bdbdbd" stroke-width="2" />
+  <text x="500" y="300" font-family="Arial" font-size="16" text-anchor="middle" font-weight="bold">BigQuery</text>
+  
+  <!-- Bronze Layer -->
+  <rect x="220" y="320" width="160" height="80" rx="5" fill="#ffcc80" stroke="#ffb74d" stroke-width="2" />
+  <text x="300" y="350" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Bronze Layer</text>
+  <text x="300" y="370" font-family="Arial" font-size="12" text-anchor="middle">(Raw Data)</text>
+  
+  <!-- Silver Layer -->
+  <rect x="420" y="320" width="160" height="80" rx="5" fill="#b3e5fc" stroke="#81d4fa" stroke-width="2" />
+  <text x="500" y="350" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Silver Layer</text>
+  <text x="500" y="370" font-family="Arial" font-size="12" text-anchor="middle">(Validated Data)</text>
+  
+  <!-- Gold Layer -->
+  <rect x="620" y="320" width="160" height="80" rx="5" fill="#fff59d" stroke="#ffee58" stroke-width="2" />
+  <text x="700" y="350" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">Gold Layer</text>
+  <text x="700" y="370" font-family="Arial" font-size="12" text-anchor="middle">(Aggregated Data)</text>
+  
+  <!-- SQL Transformations -->
+  <rect x="390" y="390" width="30" height="20" rx="3" fill="#e1bee7" stroke="#ba68c8" stroke-width="2" />
+  <text x="405" y="405" font-family="Arial" font-size="10" text-anchor="middle">SQL</text>
+  
+  <rect x="590" y="390" width="30" height="20" rx="3" fill="#e1bee7" stroke="#ba68c8" stroke-width="2" />
+  <text x="605" y="405" font-family="Arial" font-size="10" text-anchor="middle">SQL</text>
+
+  <!-- Orchestration Layer -->
+  <!-- Cloud Function -->
+  <rect x="300" y="450" width="120" height="50" rx="5" fill="#ce93d8" stroke="#ab47bc" stroke-width="2" />
+  <text x="360" y="480" font-family="Arial" font-size="14" text-anchor="middle">Cloud Function</text>
+  
+  <!-- Cloud Scheduler -->
+  <rect x="500" y="450" width="120" height="50" rx="5" fill="#ce93d8" stroke="#ab47bc" stroke-width="2" />
+  <text x="560" y="480" font-family="Arial" font-size="14" text-anchor="middle">Cloud Scheduler</text>
+
+  <!-- Visualization Layer -->
+  <!-- Streamlit App -->
+  <rect x="300" y="540" width="120" height="50" rx="5" fill="#80deea" stroke="#26c6da" stroke-width="2" />
+  <text x="360" y="570" font-family="Arial" font-size="14" text-anchor="middle">Streamlit App</text>
+  
+  <!-- App Engine -->
+  <rect x="500" y="540" width="120" height="50" rx="5" fill="#80deea" stroke="#26c6da" stroke-width="2" />
+  <text x="560" y="570" font-family="Arial" font-size="14" text-anchor="middle">App Engine</text>
+
+  <!-- Arrows -->
+  <!-- Data Sources to Producer -->
+  <polyline points="240,120 240,180" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  <polyline points="360,120 320,150 260,180" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  <polyline points="480,120 320,170 260,180" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  <polyline points="640,120 320,170 260,180" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Producer to Pub/Sub -->
+  <line x1="320" y1="205" x2="400" y2="205" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Pub/Sub to Bronze Consumer -->
+  <line x1="520" y1="205" x2="600" y2="205" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Bronze Consumer to Bronze Layer -->
+  <polyline points="660,230 660,270 300,320" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Bronze to Silver (via SQL) -->
+  <line x1="380" y1="360" x2="420" y2="360" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Silver to Gold (via SQL) -->
+  <line x1="580" y1="360" x2="620" y2="360" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Cloud Scheduler to Cloud Function -->
+  <line x1="500" y1="475" x2="420" y2="475" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Cloud Function to BigQuery -->
+  <polyline points="360,450 360,410 500,410" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Gold Layer to Streamlit -->
+  <polyline points="700,400 700,520 420,555" fill="none" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Streamlit to App Engine -->
+  <line x1="420" y1="565" x2="500" y2="565" stroke="#424242" stroke-width="2" marker-end="url(#arrowhead)" />
+  
+  <!-- Arrow Definition -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#424242" />
+    </marker>
+  </defs>
+  
+  <!-- Legend -->
+  <rect x="750" y="80" width="20" height="15" fill="#c5e1a5" stroke="#81c784" stroke-width="1" />
+  <text x="775" y="93" font-family="Arial" font-size="12" text-anchor="start">Server</text>
+  
+  <rect x="750" y="105" width="20" height="15" fill="#90caf9" stroke="#42a5f5" stroke-width="1" />
+  <text x="775" y="118" font-family="Arial" font-size="12" text-anchor="start">Ingestion Component</text>
+  
+  <rect x="750" y="130" width="20" height="15" fill="#ffcc80" stroke="#ffb74d" stroke-width="1" />
+  <text x="775" y="143" font-family="Arial" font-size="12" text-anchor="start">Bronze Layer</text>
+  
+  <rect x="750" y="155" width="20" height="15" fill="#b3e5fc" stroke="#81d4fa" stroke-width="1" />
+  <text x="775" y="168" font-family="Arial" font-size="12" text-anchor="start">Silver Layer</text>
+  
+  <rect x="750" y="180" width="20" height="15" fill="#fff59d" stroke="#ffee58" stroke-width="1" />
+  <text x="775" y="193" font-family="Arial" font-size="12" text-anchor="start">Gold Layer</text>
+  
+  <rect x="750" y="205" width="20" height="15" fill="#ce93d8" stroke="#ab47bc" stroke-width="1" />
+  <text x="775" y="218" font-family="Arial" font-size="12" text-anchor="start">Orchestration Component</text>
+  
+  <rect x="750" y="230" width="20" height="15" fill="#80deea" stroke="#26c6da" stroke-width="1" />
+  <text x="775" y="243" font-family="Arial" font-size="12" text-anchor="start">Visualization Component</text>
+</svg>
